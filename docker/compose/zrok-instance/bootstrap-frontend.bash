@@ -106,11 +106,11 @@ if [[ -n "${ZROK_PUBLIC_TOKEN}" ]]; then
 
   echo "INFO: updating frontend"
   zrok admin update frontend "${ZROK_PUBLIC_TOKEN}" \
-    --url-template "${ZROK_FRONTEND_SCHEME}://{token}.${ZROK_DNS_ZONE}"
+    --url-template "${ZROK_FRONTEND_SCHEME}://${ZROK_DNS_ZONE}/{token}"
 else
   echo "INFO: creating frontend"
   zrok admin create frontend "${ZITI_PUBLIC_ID}" public \
-    "${ZROK_FRONTEND_SCHEME}://{token}.${ZROK_DNS_ZONE}"
+    "${ZROK_FRONTEND_SCHEME}://${ZROK_DNS_ZONE}/{token}"
 fi
 
 exec "${@}"
