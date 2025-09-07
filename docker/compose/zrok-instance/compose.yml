@@ -157,7 +157,7 @@ services:
       ZROK_DNS_ZONE: ${ZROK_DNS_ZONE}  # e.g., "example.com" or "127.0.0.1.sslip.io"
       ZROK_ADMIN_TOKEN: ${ZROK_ADMIN_TOKEN} # zrok controller admin password
       ZROK_API_ENDPOINT: http://zrok-controller:${ZROK_CTRL_PORT:-18080} # bridge address of the zrok controller
-      ZROK_FRONTEND_SCHEME: http
+      ZROK_FRONTEND_SCHEME: https
       ZROK_FRONTEND_PORT: ${ZROK_FRONTEND_PORT:-8080}
       ZITI_CTRL_ADVERTISED_PORT: ${ZITI_CTRL_ADVERTISED_PORT:-80}
       ZITI_PWD: ${ZITI_PWD} # ziti controller admin password
